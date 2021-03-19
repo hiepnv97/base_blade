@@ -17,9 +17,11 @@
     <div class="wrapper_main">
         <div class="wrapper_header">
             @include('layouts.header')
-            <div class="wrapper_content">
-                @yield('content')
-            </div>
+        </div>
+        <div class="wrapper_content">
+            @yield('content')
+        </div>
+        <div class="wrapper_footer">
             @include('layouts.footer')
         </div>
     </div>
