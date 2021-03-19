@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/bootstrap';
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a, a:hover {
+    text-decoration: none;
+}
+.wrapper {
+    display: flex;
+    .wrapper__sidebar {
+        background-color: #273546;
+        width: 296px;
+        height: 100vh;
+        .sidebar {
+            .sidebar__logo {
+                font-size: 15px;
+                color: #FFFFFF;
+                padding: 27px 79px;
+                background-color: #0E131A;
+            }
+            .sidebar__menu {
+                background-color: #273546;
+                ul {
+                    margin-bottom: 0;
+                    li {
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            img {
+                                margin-right: 15px;
+                            }
+                            margin-left: 25px;
+                            color: #FFFFFF;
+                            font-size: 14px;
+                        }
+                    }
+                    li.active {
+                        background-color: #0878DA;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper_main {
+        width: calc(100% - 296px);
+        .wrapper_header {
+            .header {
+                padding: 0 20px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .header__bar {
+                    display: flex;
+                    flex-direction: column;
+                    width: 25px;
+                    span {
+                        margin-bottom: 8px;
+                        border-bottom: 2px solid #CCCCCC;
+                    }
+                }
+                .header__setting {
+                    i.fa-cog {
+                        font-size: 30px;
+                        color: #BCBCCB;
+                    }
+                }
+            }
+            .wrapper_content {
+                background-color: #ECECEC;
+            }
+        }
+    }
+}
