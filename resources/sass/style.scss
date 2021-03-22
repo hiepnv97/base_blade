@@ -79,6 +79,7 @@ body {
     .wrapper_main.show_sidebar {
         margin-left: 296px;
         transition:  margin-left 0.4s;
+        width: calc(100% - 296px);
     }
     .wrapper_main {
         margin-left: 0px;
@@ -132,6 +133,9 @@ body {
             }
         }
         .wrapper_content {
+            padding: 10px 60px 30px 60px;
+            overflow-y: auto;
+            overflow-x: hidden;
             .select_gender_option {
                 width: 104px;
                 height: 40px;
@@ -140,9 +144,6 @@ body {
                 margin-right: 20px
               }
               .users-list {
-                overflow-y: auto;
-                overflow-x: hidden;
-                padding: 10px 60px 30px 60px;
                 &__title {
                     font-size: 25px;
                     margin-bottom: 20px;
@@ -150,11 +151,15 @@ body {
                 .card {
                     background-color: $white;
                     padding: 30px;
-                    padding-top: 20px
+                    padding-top: 20px;
+                    box-shadow: 0 0 10px #0000001A;
                 }
                 .list-option--top {
+                    font-size: 12px;
                     input {
                         height: 40px;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 3px;
                     }
                     p {
                       margin-top: 10px;
@@ -173,6 +178,111 @@ body {
                       margin-right: 20px;
                     }
                   }
+                  .list-option--bottom {
+                    font-size: 12px;
+                    input {
+                        height: 40px;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 3px;
+                    }
+                    margin-bottom: 30px;
+                    position: relative;
+                    p {
+                      margin-top: 10px;
+                      margin-bottom: 0;
+                    }
+                    .select_verification_status {
+                        width: 172px;
+                        height: 40px;
+                        margin-right: 20px;
+                        box-shadow: none;
+                    }
+                    .email {
+                      width: 333px;
+                      margin-right: 20px;
+                    }
+                    .btn-search {
+                      width: 60px;
+                      height: 40px;
+                      margin-left: 20px;
+                      position: absolute;
+                      bottom: 0;
+                      border: none;
+                      box-shadow: none;
+                      outline: none;
+                      border-radius: 3px;
+                      font-size: 15px;
+                    }
+                    .name {
+                      width: 135px;
+                      margin-right: 20px;
+                    }
+                  }
+                  hr {
+                    margin: 0 -30px
+                }
+                .record {
+                    font-size: 15px;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    &__select {
+                      margin-right: 10px;
+                      width: 80px;
+                      height: 40px;
+                      box-shadow: none;
+                    }
+                    span {
+                        color: #333333;
+                    }
+                }
+                table, td, th {
+                    border: 1px solid #CCCCCC;
+                    border-collapse: collapse;
+                  }
+                  td, th {
+                    padding: 17px 20px
+                  }
+                  table {
+                      width: 3000px;
+                  }
+                  &__table {
+                      margin-bottom: 15px;
+                      overflow-x: auto;
+                        i {
+                            color: #BCBCCB;
+                            opacity: 0.5;
+                        }
+                        i.active {
+                                color: #111111;
+                                opacity: 1;
+                        }
+                        .fields {
+                            font-size: 13px;
+                        }
+                        .user-info {
+                            font-size: 15px;
+                            color: #333333;
+                        }
+                        .btn_user-detail {
+                            border: none;
+                            outline: none;
+                            background-color: #ECECEC;
+                            border-radius: 3px;
+                            width: 80px;
+                            height: 40px;
+                            font-size: 13px;
+                        }
+                  }
+                  .table__footer {
+                    &__text{
+                        font-size: 13px;
+                    }
+                    &__pagination {
+                        li.active {
+                            background-color: #1874C4;
+                        }
+                    }
+                }
               }
         }
 
@@ -182,7 +292,7 @@ body {
             .footer {
                 font-size: 10px;
                 color: #666666;
-                margin-left: 26px;
+                margin-left: -34px;
             }
         }
     }
@@ -204,13 +314,12 @@ body {
             appearance: none;
     color: #768192;
     background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23636f83' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
-    border-color: #d8dbe0;
+    border-color: #CCCCCC;
   }
   
   .custom-select:focus {
-    border-color: #958bef;
+    border-color: #CCCCCC;
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(50, 31, 219, 0.25);
   }
   
   .custom-select:focus::-ms-value {

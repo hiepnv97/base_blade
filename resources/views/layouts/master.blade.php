@@ -11,10 +11,10 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="wrapper__sidebar">
+    <div class="wrapper__sidebar active">
         @include('layouts.sidebar')
     </div>
-    <div class="wrapper_main">
+    <div class="wrapper_main show_sidebar">
         <div class="wrapper_header">
             @include('layouts.header')
         </div>
