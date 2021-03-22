@@ -1,6 +1,6 @@
 <div class="header">
   <div class="header__bar">
-  <i class="fa fa-bars"></i>
+    <i class="fa fa-bars"></i>
   </div>
   <div class="header__setting">
     <i class="fa fa-cog"></i>

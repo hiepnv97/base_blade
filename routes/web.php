@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-   return view('modules.users.user');
+   return view('modules.users.userlist');
 });
