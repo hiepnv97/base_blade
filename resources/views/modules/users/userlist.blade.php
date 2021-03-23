@@ -68,7 +68,7 @@
     </div>
     <hr />
     <div class="users-list__content">
-      <div class="d-flex justify-content-start align-items-center record">
+      <div class="d-flex justify-content-start align-items-center record user-record">
         <select class="form-select form-select-lg custom-select record__select" aria-label=".form-select-lg example">
           <option value="1" selected>5</option>
           <option value="2">10</option>
@@ -82,18 +82,18 @@
             <th>
               <div class="d-flex justify-content-between f-w6 fields">
                 ユーザーID
-                <div>
-                  <i class="fa fa-arrow-down active"></i>
-                  <i class="fa fa-arrow-up"></i>
+                <div class="user_id">
+                  <i class="fa fa-arrow-down active icon"></i>
+                  <i class="fa fa-arrow-up icon"></i>
                 </div>
               </div>
             </th>
             <th>
               <div class="d-flex justify-content-between f-w6 fields">
                 種別
-                <div>
-                  <i class="fa fa-arrow-down"></i>
-                  <i class="fa fa-arrow-up"></i>
+                <div class="aaaa"> 
+                  <i class="fa fa-arrow-down icon"></i>
+                  <i class="fa fa-arrow-up icon"></i>
                 </div>
               </div>
             </th>

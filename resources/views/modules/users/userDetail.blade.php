@@ -144,10 +144,10 @@
           </div>
         </div>
         <div id="alert-save-info" class="w-100 alert-success">
-          <x-alert title="保存しました。" />
+          @include('components.alert', ['title' => '保存しました。'])
         </div>
         <div id="alert-give-point" class="w-100 alert-success">
-          <x-alert title="ポイントを付与しました。"></x-alert>
+          @include('components.alert', ['title' => 'ポイントを付与しました。'])
         </div>
       </div>
       <div class="row user-detail__content-image">
@@ -356,7 +356,7 @@
         </div>
       </div>
       <div id="alert-sale-support" class="w-100 alert-success">
-        <x-alert title="変更しました。"></x-alert>
+        @include('components.alert', ['title' => '変更しました。'])
       </div>
     </div>
   </div>

@@ -25,10 +25,16 @@ td, th {
       }
 }
 .table__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &__text{
       font-size: 13px;
   }
   &__pagination {
+    ul {
+      margin-bottom: 0;
+    }
       li.active {
           background-color: #1874C4;
       }

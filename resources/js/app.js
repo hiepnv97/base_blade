@@ -36,6 +36,7 @@ $(document).ready(function () {
     showDropDown = 0;
   }
 });
+//detail-user
 var myVar;
 $(document).ready(function () {
   $(".card-footer__btn").click(function () {
@@ -86,4 +87,25 @@ $(document).ready(function () {
       window.location.href = "/users"
     }, 1000);
   });
+});
+$(document).ready(function() {
+  $(".icon").click(function(e) {
+    e.target.parentNode;
+    console.log(e.target.parentNode.className)
+  }) 
+})
+//image-identity
+$(document).ready(function () {
+  $(".btn_accept-image").click(function () {
+    $("#alert-accept-image").addClass("show");
+    myVar = setTimeout(function () { $("#alert-accept-image").removeClass("show") }, 2900);
+  });
+  $(".refuse-image__btn-cancel").click(function () {
+    $("#modal-refuse-image").modal("hide")
+  });
+  $(".refuse-image__btn-success").click(function () {
+    $("#alert-refuse-image").addClass("show");
+    myVar = setTimeout(function () { $("#alert-refuse-image").removeClass("show") }, 2900);
+    $("#modal-refuse-image").modal("hide")
+  })
 });

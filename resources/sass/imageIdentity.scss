@@ -1,0 +1,50 @@
+.image-identity {
+  &__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  td {
+    vertical-align: inherit;
+    div {
+      img {
+        width: 263px;
+        height: 243px;
+      }
+    }
+  }
+  .card {
+    padding: 30px;
+  }
+  .image-id {
+    width: 140px;
+  }
+  .user-id {
+    width: 195px
+  }
+  .image-type {
+    width: 163px
+  }
+  .image {
+    width: 515px;
+  }
+  .time {
+    width: 241px;
+  }
+  .action {
+    width: 190px;
+  }
+  .image__btn {
+    button {
+      color: #FFFFFF;
+      padding: 6px 17px;
+      font-size: 13px;
+    }
+    .btn_accept-image {
+      background-color: #1874C4;
+      margin-right: 10px;
+    }
+    .btn_refuse-image {
+      background-color: #E58B8B;
+    }
+  }
+}

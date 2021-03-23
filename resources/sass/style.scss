@@ -3,6 +3,7 @@
 $font-path: "../fonts/";
 @import "./table.scss";
 @import "./alert.scss";
+@import "./imageIdentity.scss";
 @font-face {
     font-family: 'Hiragino W3';
     src: url('#{$font-path}/hiragino-kaku-gothic-pro-w3.otf');
@@ -39,6 +40,44 @@ button {
 .card-header, .card-footer {
     background-color: #FFFFFF;
     padding-left: 30px
+}
+.record {
+  font-size: 15px;
+  margin-bottom: 20px;
+  .record__select {
+    margin-right: 10px;
+    width: 80px;
+    height: 40px;
+    box-shadow: none;
+  }
+  span {
+      color: #333333;
+  }
+}
+.modal-two-button {
+  .modal-dialog {
+    width: 400px;
+  }
+  .modal-header {
+    border: none;
+    padding-bottom: 0;
+  }
+  .modal-body{
+    padding: 0 40px 40px 40px;
+    font-size: 15px;
+    p {
+      margin: 0 30px;
+      margin-bottom: 30px;
+    }
+    button {
+      width: 150px;
+      height: 50px;
+    }
+    .btn-cancel {
+      background-color: #1874C4;
+      color: #FFFFFF;
+    }
+  }
 }
 .wrapper {
     .wrapper__sidebar.active {
@@ -156,6 +195,9 @@ button {
                     font-size: 25px;
                     margin-bottom: 20px;
                 }
+                .user-record {
+                  margin-top: 30px;
+                }
                 .card {
                     background-color: $white;
                     padding: 30px;
@@ -228,20 +270,6 @@ button {
                   }
                   hr {
                     margin: 0 -30px
-                }
-                .record {
-                    font-size: 15px;
-                    margin-top: 30px;
-                    margin-bottom: 20px;
-                    &__select {
-                      margin-right: 10px;
-                      width: 80px;
-                      height: 40px;
-                      box-shadow: none;
-                    }
-                    span {
-                        color: #333333;
-                    }
                 }
                 &__table {
                   width: 3000px;
@@ -377,31 +405,6 @@ button {
                       margin-top: 50px;
                       color: $white;
                       float: right;
-                    }
-                  }
-                  .modal-two-button {
-                    .modal-dialog {
-                      width: 400px;
-                    }
-                    .modal-header {
-                      border: none;
-                      padding-bottom: 0;
-                    }
-                    .modal-body{
-                      padding: 0 40px 40px 40px;
-                      font-size: 15px;
-                      p {
-                        margin: 0 30px;
-                        margin-bottom: 30px;
-                      }
-                      button {
-                        width: 150px;
-                        height: 50px;
-                      }
-                      .btn-cancel {
-                        background-color: #1874C4;
-                        color: #FFFFFF;
-                      }
                     }
                   }
               }

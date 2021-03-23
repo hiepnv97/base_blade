@@ -23,3 +23,6 @@ Route::get('/users', function () {
 Route::get('/users/detail', function () {
     return view('modules.users.userDetail');
  });
+ Route::get('/users/image-identity', function () {
+    return view('modules.users.imageIdentityVerificationApproval');
+ });
