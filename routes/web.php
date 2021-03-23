@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/users', function () {
    return view('modules.users.userlist');
 });
+Route::get('/point-movement', function () {
+    return view('modules.users.pointMovementHistory');
+});

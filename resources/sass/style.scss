@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "./point.scss";
 $font-path: "../fonts/";
 
 @font-face {
@@ -30,7 +31,6 @@ body {
     font-family: "Hiragino W6";
 }
 .wrapper {
-    display: flex;
     .wrapper__sidebar.active {
         left: 0px;
         transition: left 0.4s;
@@ -79,13 +79,11 @@ body {
     .wrapper_main.show_sidebar {
         margin-left: 296px;
         transition:  margin-left 0.4s;
-        width: calc(100% - 296px);
     }
     .wrapper_main {
         margin-left: 0px;
         transition:  margin-left 0.4s;
         position: relative;
-        width: 100%;
         min-height: 100vh;
         background-color: #ECECEC;
         .wrapper_header {

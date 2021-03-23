@@ -1,0 +1,80 @@
+.point-list {
+  &__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .card {
+    background-color: $white;
+    padding: 30px;
+    padding-top: 20px;
+    box-shadow: 0 0 10px #0000001A;
+  }
+}
+.list-option--top-point {
+  font-size: 12px;
+  padding-bottom: 30px;
+  input {
+      height: 40px;
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 3px;
+      margin-right: 20px;
+  }
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .name {
+    width: 159px;
+    height: 40px;
+    margin-right: 20px
+  }
+  .select-gender__option {
+    width: 116px;
+    height: 40px;
+    margin-right: 20px
+  }
+  .start-date, .end-date {
+    width: 199px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .btn-search {
+    width: 60px;
+    height: 40px;
+    margin-left: 20px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+}
+.point-list__content {
+  &-table {
+    table {
+      .fields {
+        font-size: 13px;
+      }
+      i {
+        color: #BCBCCB;
+        opacity: 0.5;
+      }
+      i.active {
+        color: #111111;
+        opacity: 1;
+      }
+      width: 100%!important;
+      margin-bottom: 20px;
+      tr:first-child {
+        border-top: 2px solid #CCCCCC;
+        border-bottom: 2px solid #CCCCCC;
+      }
+      tr:last-child {
+        border-top: 2px solid #CCCCCC;
+      }
+      td {
+        font-size: 15px;
+      }
+    }
+  }
+}
