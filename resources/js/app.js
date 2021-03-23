@@ -22,17 +22,68 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () { 
-  window.onclick = function(event) {
-    if(!event.target.matches(".header__setting")) {
+$(document).ready(function () {
+  window.onclick = function (event) {
+    if (!event.target.matches(".header__setting")) {
       var d = document.getElementsByClassName("header__drop");
-      for(var i = 0; i< d.length; i++) {
+      for (var i = 0; i < d.length; i++) {
         var x = d[i];
-        if(x.classList.contains("active") && showDropDown == 0) {
+        if (x.classList.contains("active") && showDropDown == 0) {
           x.classList.remove("active");
         }
       }
     }
     showDropDown = 0;
   }
+});
+var myVar;
+$(document).ready(function () {
+  $(".card-footer__btn").click(function () {
+    $("#alert-save-info").addClass("show");
+    myVar = setTimeout(function () { $("#alert-save-info").removeClass("show") }, 2900);
+  });
+});
+
+$(document).ready(function () {
+  $(".close-alert__btn").click(function () {
+    $(".alert-success").removeClass("show");
+    clearTimeout(myVar)
+  });
+});
+$(document).ready(function () {
+  $(".give-point__btn").click(function () {
+    $("#alert-give-point").addClass("show");
+    myVar = setTimeout(function () { $("#alert-give-point").removeClass("show") }, 2900);
+    $("#modal-give-point").modal("hide")
+  });
+});
+$(document).ready(function () {
+  $(".sale-support__btn-cancel").click(function () {
+    $("#modal-sale-support").modal("hide")
+  })
+})
+
+$(document).ready(function () {
+  $(".sale-support__btn-success").click(function () {
+    $("#alert-sale-support").addClass("show");
+    myVar = setTimeout(function () { $("#alert-sale-support").removeClass("show") }, 2900);
+    $("#modal-sale-support").modal("hide")
+  });
+});
+
+$(document).ready(function () {
+  $(".delete-user__btn-cancel").click(function () {
+    $("#modal-delete-user").modal("hide")
+  })
+});
+
+$(document).ready(function () {
+  $(".delete-user__btn-success").click(function () {
+    $("#loading-overlay").addClass("show");
+    setTimeout(function () { 
+      $("#loading-overlay").removeClass("show"); 
+      $("#modal-delete-user").modal("hide");
+      window.location.href = "/users"
+    }, 1000);
+  });
 });

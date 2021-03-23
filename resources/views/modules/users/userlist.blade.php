@@ -76,8 +76,8 @@
         </select>
         <span>件表示</span>
       </div>
-      <div class="users-list__table">
-        <table>
+      <div class="table">
+        <table class="users-list__table">
           <tr>
             <th>
               <div class="d-flex justify-content-between f-w6 fields">
@@ -245,7 +245,7 @@
               編集
             </th>
           </tr>
-          <tr class="f-w3 user-info">
+          <tr class="f-w3 info">
             <td>12345</td>
             <td>一般</td>
             <td>タナカタナカ</td>

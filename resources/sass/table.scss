@@ -1,0 +1,36 @@
+table, td, th {
+  border: 1px solid #CCCCCC;
+  border-collapse: collapse;
+}
+td, th {
+  padding: 17px 20px
+}
+.table {
+    margin-bottom: 15px;
+    overflow-x: auto;
+      i {
+          color: #BCBCCB;
+          opacity: 0.5;
+      }
+      i.active {
+              color: #111111;
+              opacity: 1;
+      }
+      .fields {
+          font-size: 13px;
+      }
+      .info {
+          font-size: 15px;
+          color: #333333;
+      }
+}
+.table__footer {
+  &__text{
+      font-size: 13px;
+  }
+  &__pagination {
+      li.active {
+          background-color: #1874C4;
+      }
+  }
+}

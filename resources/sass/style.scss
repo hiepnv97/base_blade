@@ -1,7 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 $font-path: "../fonts/";
-
+@import "./table.scss";
+@import "./alert.scss";
 @font-face {
     font-family: 'Hiragino W3';
     src: url('#{$font-path}/hiragino-kaku-gothic-pro-w3.otf');
@@ -33,9 +34,11 @@ button {
     box-shadow: none;
     border-radius: 3px;
     border: none;
+    outline: none;
 }
 .card-header, .card-footer {
     background-color: #FFFFFF;
+    padding-left: 30px
 }
 .wrapper {
     .wrapper__sidebar.active {
@@ -240,53 +243,17 @@ button {
                         color: #333333;
                     }
                 }
-                table, td, th {
-                    border: 1px solid #CCCCCC;
-                    border-collapse: collapse;
-                  }
-                  td, th {
-                    padding: 17px 20px
-                  }
-                  table {
-                      width: 3000px;
-                  }
-                  &__table {
-                      margin-bottom: 15px;
-                      overflow-x: auto;
-                        i {
-                            color: #BCBCCB;
-                            opacity: 0.5;
-                        }
-                        i.active {
-                                color: #111111;
-                                opacity: 1;
-                        }
-                        .fields {
-                            font-size: 13px;
-                        }
-                        .user-info {
-                            font-size: 15px;
-                            color: #333333;
-                        }
-                        .btn_user-detail {
-                            border: none;
-                            outline: none;
-                            background-color: #ECECEC;
-                            border-radius: 3px;
-                            width: 80px;
-                            height: 40px;
-                            font-size: 13px;
-                        }
-                  }
-                  .table__footer {
-                    &__text{
-                        font-size: 13px;
-                    }
-                    &__pagination {
-                        li.active {
-                            background-color: #1874C4;
-                        }
-                    }
+                &__table {
+                  width: 3000px;
+                  .btn_user-detail {
+                    border: none;
+                    outline: none;
+                    background-color: #ECECEC;
+                    border-radius: 3px;
+                    width: 80px;
+                    height: 40px;
+                    font-size: 13px;
+                }
                 }
               }
               .user-detail {
@@ -294,12 +261,30 @@ button {
                   .card {
                       margin-bottom: 40px;
                   }
+                  .card-rank {
+                    height: calc(100% - 40px);
+                  }
                   .card__content {
                     padding: 30px;
                     .select-option {
                         height: 40px;
                         width: 40%;
                         box-shadow: none;
+                    }
+                  }
+                  textarea {
+                    box-shadow: none;
+                    outline: none;
+                    padding: 12px 22px;
+                  }
+                  .card-footer {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    &__btn {
+                      font-size: 13px;
+                      padding: 7px 17px;
+                      box-shadow: none;
                     }
                   }
                   &__title {
@@ -322,7 +307,102 @@ button {
                   &__content {
                       &-info {
                           margin-bottom: 45px;
+                          display: flex;
+                          justify-content: flex-start;
+                          align-items: center;
                       }
+                      &-image {
+                            img {
+                            width: 270px;
+                            height: 270px;
+                            margin-right: 35px;
+                            margin-top: 15px;
+                            margin-bottom: 15px;
+                            }
+                      }
+                      textarea {
+                        resize: none;
+                      }
+                      .button--footer {
+                        margin-top: 10px;
+                        margin-bottom: 40px;
+                      }
+                      .sale-support__btn {
+                        background-color: #1874C4;
+                        padding: 13px 30px;
+                        margin-right: 20px;
+                        color: #FFFFFF;
+                      }
+                      .button--footer--right {
+                        padding: 8px 15px;
+                        background-color: #ef4f4f;
+                        color: #FFFFFF;
+                      }
+                  }
+                  #modal-give-point {
+                    .modal-dialog {
+                      width: 440px;
+                    }
+                  }
+                  .modal-header {
+                    align-items: center !important;
+                    .modal-title {
+                        font-size: 15px;
+                    }
+                  }
+                  .give-point {
+                    font-size: 13px;
+                    padding: 50px;
+                    .point {
+                        font-size: 13px;
+                    }
+                    div {
+                      width: 100%;
+                    }
+                    input {
+                      margin-right: 15px;
+                      border-radius: 5px;
+                      outline: none;
+                      border: 1px solid #CCCCCC;
+                      flex: 1;
+                      height: 50px;
+                      padding: 10px
+                    }
+                    button {
+                      border: none;
+                      border-radius: 3px;
+                      background-color: #0089FF;
+                      padding: 18px 45px;
+                      font-size: 15px;
+                      margin-top: 50px;
+                      color: $white;
+                      float: right;
+                    }
+                  }
+                  .modal-two-button {
+                    .modal-dialog {
+                      width: 400px;
+                    }
+                    .modal-header {
+                      border: none;
+                      padding-bottom: 0;
+                    }
+                    .modal-body{
+                      padding: 0 40px 40px 40px;
+                      font-size: 15px;
+                      p {
+                        margin: 0 30px;
+                        margin-bottom: 30px;
+                      }
+                      button {
+                        width: 150px;
+                        height: 50px;
+                      }
+                      .btn-cancel {
+                        background-color: #1874C4;
+                        color: #FFFFFF;
+                      }
+                    }
                   }
               }
         }
@@ -333,7 +413,7 @@ button {
             .footer {
                 font-size: 10px;
                 color: #666666;
-                margin-left: -34px;
+                margin-left: 26px;
             }
         }
     }
